@@ -4,6 +4,8 @@ const pauseButton = document.getElementById("pause");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const shuffleButton = document.getElementById("shuffle");
+const volumeControl = document.getElementById("volume");
+const progressBar = document.getElementById("progress-bar");
 
 // let allSongs = [
 //   {
@@ -222,6 +224,23 @@ nextButton.addEventListener("click", playNextSong);
 previousButton.addEventListener("click", playPreviousSong);
 
 shuffleButton.addEventListener("click", shuffle);
+
+volumeControl.addEventListener("input", () => {
+    audio.volume = event.target.value;
+});
+
+audio.addEventListener("timeupdate", () => {
+    if (audio.duration) {
+        const progressPercent = (audio.currentTime / audio.duration) * 100;
+        progressBar.value = progressPercent;
+    }
+});
+
+// seek to different parts of the song
+progressBar.addEventListener("input", () => {
+    const seekTime = (progressBar.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
+});
 
 audio.addEventListener("ended", ()=>{
     const currentSongIndex = getCurrentSongIndex();

@@ -114,6 +114,7 @@
     column-gap: 13px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   #player-album-art {
@@ -175,6 +176,15 @@
   .playlist-song:focus {
     outline-style: dashed;
     outline-width: 2px;
+  }
+
+  .progress-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #progress-bar {
+    width: 100%;
   }
   
   /* Playlist */
