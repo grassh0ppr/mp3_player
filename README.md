@@ -17,6 +17,8 @@ The project covers fundamental concepts such as handling audio playback, managin
 - Play, pause, and skip tracks.
 - Shuffle playlist.
 - Display album art, song title, and artist name.
+- Volume control
+- Seek track progress bar
 
 ## Usage
 

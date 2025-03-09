@@ -7,67 +7,102 @@ const shuffleButton = document.getElementById("shuffle");
 const volumeControl = document.getElementById("volume");
 const progressBar = document.getElementById("progress-bar");
 
-// let allSongs = [
-//   {
-//     id: 0,
-//     title: "Scratching The Surface",
-//     artist: "Quincy Larson",
-//     duration: "4:25",
-//     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
-//   },
-//   {
-//     id: 1,
-//     title: "Can't Stay Down",
-//     artist: "Quincy Larson",
-//     duration: "4:15",
-//     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3",
-//   },
-//   {
-//     id: 2,
-//     title: "Still Learning",
-//     artist: "Quincy Larson",
-//     duration: "3:51",
-//     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/still-learning.mp3",
-//   },
-// ];
+let allSongs = [
+  {
+    id: 0,
+    title: "Scratching The Surface",
+    artist: "Quincy Larson",
+    duration: "4:25",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+  },
+  {
+    id: 1,
+    title: "Can't Stay Down",
+    artist: "Quincy Larson",
+    duration: "4:15",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3",
+  },
+  {
+    id: 2,
+    title: "Still Learning",
+    artist: "Quincy Larson",
+    duration: "3:51",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/still-learning.mp3",
+  },
+  {
+    id: 0,
+    title: "Hello World",
+    artist: "Rafael",
+    duration: "0:23",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/hello-world.mp3",
+  },
+  {
+    id: 1,
+    title: "In the Zone",
+    artist: "Rafael",
+    duration: "0:11",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/in-the-zone.mp3",
+  },
+  {
+    id: 2,
+    title: "Camper Cat",
+    artist: "Rafael",
+    duration: "0:21",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/camper-cat.mp3",
+  },
+  {
+    id: 3,
+    title: "Electronic",
+    artist: "Rafael",
+    duration: "0:15",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/electronic.mp3",
+  },
+  {
+    id: 4,
+    title: "Sailing Away",
+    artist: "Rafael",
+    duration: "0:22",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3",
+  },
+];
 
-const allSongs = [
-    {
-      id: 0,
-      title: "Hello World",
-      artist: "Rafael",
-      duration: "0:23",
-      src: "https://cdn.freecodecamp.org/curriculum/js-music-player/hello-world.mp3",
-    },
-    {
-      id: 1,
-      title: "In the Zone",
-      artist: "Rafael",
-      duration: "0:11",
-      src: "https://cdn.freecodecamp.org/curriculum/js-music-player/in-the-zone.mp3",
-    },
-    {
-      id: 2,
-      title: "Camper Cat",
-      artist: "Rafael",
-      duration: "0:21",
-      src: "https://cdn.freecodecamp.org/curriculum/js-music-player/camper-cat.mp3",
-    },
-    {
-      id: 3,
-      title: "Electronic",
-      artist: "Rafael",
-      duration: "0:15",
-      src: "https://cdn.freecodecamp.org/curriculum/js-music-player/electronic.mp3",
-    },
-    {
-      id: 4,
-      title: "Sailing Away",
-      artist: "Rafael",
-      duration: "0:22",
-      src: "https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3",
-    },
-  ];
+// const allSongs = [
+//     {
+//       id: 0,
+//       title: "Hello World",
+//       artist: "Rafael",
+//       duration: "0:23",
+//       src: "https://cdn.freecodecamp.org/curriculum/js-music-player/hello-world.mp3",
+//     },
+//     {
+//       id: 1,
+//       title: "In the Zone",
+//       artist: "Rafael",
+//       duration: "0:11",
+//       src: "https://cdn.freecodecamp.org/curriculum/js-music-player/in-the-zone.mp3",
+//     },
+//     {
+//       id: 2,
+//       title: "Camper Cat",
+//       artist: "Rafael",
+//       duration: "0:21",
+//       src: "https://cdn.freecodecamp.org/curriculum/js-music-player/camper-cat.mp3",
+//     },
+//     {
+//       id: 3,
+//       title: "Electronic",
+//       artist: "Rafael",
+//       duration: "0:15",
+//       src: "https://cdn.freecodecamp.org/curriculum/js-music-player/electronic.mp3",
+//     },
+//     {
+//       id: 4,
+//       title: "Sailing Away",
+//       artist: "Rafael",
+//       duration: "0:22",
+//       src: "https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3",
+//     },
+//   ];
 const audio = new Audio();
 let userData = {
     songs: [...allSongs],
